@@ -1,0 +1,27 @@
+Simulator input profile
+=======================
+
+Runtime source: trace-derived ChIP-seq medians/quantiles
+Carbon source: German hourly carbon-intensity trace
+Carbon intensity points: 576
+
+Trace files:
+- /Users/Fardeen/Desktop/UvA/Informatiekunde/4th_Year/Scriptie/evaluate-carbon-aware-workflows/data/traces/workflows/chipseq/chipseq-1.csv
+- /Users/Fardeen/Desktop/UvA/Informatiekunde/4th_Year/Scriptie/evaluate-carbon-aware-workflows/data/traces/workflows/chipseq/chipseq-2.csv
+- /Users/Fardeen/Desktop/UvA/Informatiekunde/4th_Year/Scriptie/evaluate-carbon-aware-workflows/data/traces/workflows/chipseq/chipseq-3.csv
+
+Carbon intensity file: /Users/Fardeen/Desktop/UvA/Informatiekunde/4th_Year/Scriptie/evaluate-carbon-aware-workflows/data/intensity/out/de-15112023-08122023.csv
+
+Mapped trace rows: 10599
+Skipped trace rows: 12
+
+Stage runtime profile:
+- RawQC: p50=1.58 min, p75=1.82 min, p95 memory=1.57 GB, median utilization=0.51
+- Trim: p50=4.82 min, p75=5.46 min, p95 memory=2.94 GB, median utilization=0.53
+- Align: p50=12.10 min, p75=13.64 min, p95 memory=32.00 GB, median utilization=0.61
+- Filter: p50=13.52 min, p75=16.40 min, p95 memory=5.88 GB, median utilization=0.34
+- Merge: p50=0.02 min, p75=0.02 min, p95 memory=1.00 GB, median utilization=0.62
+- MarkDuplicates: p50=10.88 min, p75=13.34 min, p95 memory=19.73 GB, median utilization=0.19
+- PeakCalling: p50=5.52 min, p75=7.49 min, p95 memory=1.76 GB, median utilization=0.65
+- Annotation: p50=6.79 min, p75=7.40 min, p95 memory=4.51 GB, median utilization=0.98
+- Report: p50=66.78 min, p75=104.03 min, p95 memory=6.92 GB, median utilization=0.57

@@ -1,0 +1,23 @@
+Primary scheduler comparison
+============================
+
+Runtime source: trace-derived ChIP-seq medians/quantiles
+Carbon source: German hourly carbon-intensity trace
+
+Baseline makespan: 72.22 min
+Green-aware makespan: 77.72 min
+Makespan change: 7.61%
+
+Baseline energy: 0.2534 kWh
+Green-aware energy: 0.2392 kWh
+Energy saving: 5.60%
+
+Baseline carbon: 67.29 gCO2e
+Green-aware carbon: 63.48 gCO2e
+Carbon saving: 5.66%
+
+Green-aware guardrail: 10%
+Green-aware weights: time=0.40, energy=0.20, carbon=0.40
+
+Interpretation note:
+These values are model-based estimates from a reduced workflow DAG. When trace input is enabled, task runtimes are trace-derived predictions, not exact measurements for the modeled heterogeneous nodes.

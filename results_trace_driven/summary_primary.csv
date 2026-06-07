@@ -1,0 +1,3 @@
+scheduler,makespan_min,total_energy_kwh,total_carbon_g,average_utilization,guardrail,weight_time,weight_energy,weight_carbon
+baseline,72.22286574074073,0.25337277485018,67.29198564499428,0.20515636811793794,,,,
+green_aware,77.71545833333333,0.23918677889934387,63.48149287726953,0.20516886184588368,0.1,0.4,0.2,0.4

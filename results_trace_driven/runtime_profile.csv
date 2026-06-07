@@ -1,0 +1,16 @@
+task,source_stage,predecessors,base_runtime_min,memory_gb,utilization
+RawQC,RawQC,,1.5833333333333333,2,0.51
+Trim,Trim,RawQC,4.816666666666666,3,0.5332
+Align_1,Align,Trim,10.833333333333334,32,0.607
+Align_2,Align,Trim,12.096299999999998,32,0.607
+Align_3,Align,Trim,13.635850000000001,32,0.607
+Align_4,Align,Trim,14.890000000000002,32,0.607
+Filter_1,Filter,Align_1,10.955508333333334,6,0.345
+Filter_2,Filter,Align_2,13.518450000000001,6,0.345
+Filter_3,Filter,Align_3,16.398475,6,0.345
+Filter_4,Filter,Align_4,18.693,6,0.345
+Merge,Merge,Filter_1;Filter_2;Filter_3;Filter_4,0.05,1,0.625
+MarkDuplicates,MarkDuplicates,Merge,10.883333333333335,20,0.188
+PeakCalling,PeakCalling,MarkDuplicates,5.516666666666667,2,0.6459999999999999
+Annotation,Annotation,PeakCalling,6.791666666666666,5,0.95
+Report,Report,Annotation,66.77649166666666,7,0.5715416666666666

@@ -1,0 +1,28 @@
+.DS_Store
+.Rhistory
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Local virtual environments
+.venv/
+venv/
+env/
+
+# Temporary editor files
+*.swp
+*.swo
+~$*
+
+# LaTeX/Overleaf build artifacts, if copied here later
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
