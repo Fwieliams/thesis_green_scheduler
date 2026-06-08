@@ -6,11 +6,11 @@ Carbon source: German hourly carbon-intensity trace
 Carbon intensity points: 576
 
 Trace files:
-- /Users/Fardeen/Desktop/UvA/Informatiekunde/4th_Year/Scriptie/evaluate-carbon-aware-workflows/data/traces/workflows/chipseq/chipseq-1.csv
-- /Users/Fardeen/Desktop/UvA/Informatiekunde/4th_Year/Scriptie/evaluate-carbon-aware-workflows/data/traces/workflows/chipseq/chipseq-2.csv
-- /Users/Fardeen/Desktop/UvA/Informatiekunde/4th_Year/Scriptie/evaluate-carbon-aware-workflows/data/traces/workflows/chipseq/chipseq-3.csv
+- /Users/Fardeen/Desktop/UvA/Informatiekunde/4th_Year/Scriptie/Simulator/data/traces/workflows/chipseq/chipseq-1.csv
+- /Users/Fardeen/Desktop/UvA/Informatiekunde/4th_Year/Scriptie/Simulator/data/traces/workflows/chipseq/chipseq-2.csv
+- /Users/Fardeen/Desktop/UvA/Informatiekunde/4th_Year/Scriptie/Simulator/data/traces/workflows/chipseq/chipseq-3.csv
 
-Carbon intensity file: /Users/Fardeen/Desktop/UvA/Informatiekunde/4th_Year/Scriptie/evaluate-carbon-aware-workflows/data/intensity/out/de-15112023-08122023.csv
+Carbon intensity file: /Users/Fardeen/Desktop/UvA/Informatiekunde/4th_Year/Scriptie/Simulator/data/intensity/out/de-15112023-08122023.csv
 
 Mapped trace rows: 10599
 Skipped trace rows: 12

@@ -4,8 +4,9 @@ This folder contains the working simulator for the thesis project.
 
 The simulator does **not** run the real ChIP-seq workflow. It simulates scheduling
 decisions for a reduced 15-task ChIP-seq DAG on a modeled heterogeneous cluster.
-By default, task-runtime predictions and the carbon-intensity profile are derived
-from the `evaluate-carbon-aware-workflows` trace repository next to this folder.
+The trace files and carbon-intensity file needed for the trace-driven run are
+included in this repository under `data/`, so the simulator can be reproduced
+after cloning this repository only.
 
 ## What it compares
 
@@ -28,6 +29,14 @@ To also run guardrail/weight sensitivity analysis:
 python3 simulator.py --sensitivity
 ```
 
+This reproduces the trace-driven CSV/text outputs in `results_trace_driven/`.
+The simulator uses:
+
+- `data/traces/workflows/chipseq/chipseq-1.csv`
+- `data/traces/workflows/chipseq/chipseq-2.csv`
+- `data/traces/workflows/chipseq/chipseq-3.csv`
+- `data/intensity/out/de-15112023-08122023.csv`
+
 To reproduce the older placeholder-only version:
 
 ```bash
@@ -49,6 +58,16 @@ The script writes:
 The older `results` folder contains preliminary placeholder results from the
 first simulator version. Keep it as a record, but do not use it as the final
 trace-driven result set.
+
+## Reproduce from a fresh clone
+
+```bash
+git clone https://github.com/Fwieliams/thesis_green_scheduler.git
+cd thesis_green_scheduler
+python3 simulator.py --sensitivity
+```
+
+No external workflow repository is required for the default trace-driven run.
 
 ## Important thesis note
 

@@ -44,16 +44,15 @@ SENSITIVITY_WEIGHT_SETS = [
 ]
 
 SCRIPT_DIR = Path(__file__).resolve().parent
-TRACE_REPO_DIR = SCRIPT_DIR.parent / "evaluate-carbon-aware-workflows"
-CHIPSEQ_TRACE_DIR = TRACE_REPO_DIR / "data" / "traces" / "workflows" / "chipseq"
+DATA_DIR = SCRIPT_DIR / "data"
+CHIPSEQ_TRACE_DIR = DATA_DIR / "traces" / "workflows" / "chipseq"
 CHIPSEQ_TRACE_FILES = [
     CHIPSEQ_TRACE_DIR / "chipseq-1.csv",
     CHIPSEQ_TRACE_DIR / "chipseq-2.csv",
     CHIPSEQ_TRACE_DIR / "chipseq-3.csv",
 ]
 CARBON_TRACE_FILE = (
-    TRACE_REPO_DIR
-    / "data"
+    DATA_DIR
     / "intensity"
     / "out"
     / "de-15112023-08122023.csv"
@@ -325,7 +324,12 @@ def require_files(paths: list[Path]) -> None:
     missing = [path for path in paths if not path.exists()]
     if missing:
         joined = "\n".join(str(path) for path in missing)
-        raise FileNotFoundError(f"Required trace input file(s) not found:\n{joined}")
+        raise FileNotFoundError(
+            "Required input file(s) not found. The repository should include "
+            "the trace files under data/traces/workflows/chipseq and the "
+            "carbon-intensity file under data/intensity/out.\n"
+            f"Missing:\n{joined}"
+        )
 
 
 def load_carbon_profile(path: Path) -> list[float]:
