@@ -72,5 +72,5 @@ No external workflow repository is required for the default trace-driven run.
 ## Important thesis note
 
 The simulator uses trace-derived predictions, not physical measurements on the
-modeled Sherwood/Olympus/Atlantis/Camelot nodes. In the thesis, describe this as
+modeled Sherwood/Olympus/Atlantis/Camelot nodes. In the thesis, this is described as
 a trace-driven simulation study using a reduced ChIP-seq DAG.
